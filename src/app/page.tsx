@@ -1,5 +1,7 @@
 import Criteria from "@/components/Abouts/Criteria";
 import Faqs from "@/components/Abouts/Faqs";
+import Partners from "@/components/Abouts/Partners";
+import Prize from "@/components/Abouts/Prize/Prize";
 import Rules from "@/components/Abouts/Rules";
 import TimeLines from "@/components/Abouts/TimeLine/TimeLine";
 
@@ -20,6 +22,8 @@ const page = () => {
         <Criteria/>
         <Faqs/>
         <TimeLines />
+        <Prize />
+        <Partners />
       </div>
     </main>
   );

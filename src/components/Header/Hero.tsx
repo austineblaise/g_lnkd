@@ -1,18 +1,14 @@
 "use client";
 import React from "react";
 
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
 
 const HeroSection = () => {
   return (
     <section className="lg:py-3     container  lg:ml-6 lg:px-12 px-2 py-4 border-b  border-gray-500">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+        <div
+         
           className="col-span-6 text-center sm:text-left justify-self-start lg:mt-[105px]"
         >
           <div className="flex items-center">
@@ -29,7 +25,7 @@ const HeroSection = () => {
               1.0
             </span>
             <img
-              src="/assets/chain.png" // Replace with your image path
+              src="/assets/chain.png" 
               alt="Your Image"
               className="ml-2 w-16 h-16" // Adjust margin as needed for spacing
             />
@@ -93,11 +89,9 @@ const HeroSection = () => {
               </span>
             </Link> */}
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+        </div>
+        <div
+         
           className="col-span-6 place-self-center mt-4 lg:mt-0 "
         >
           {/* <div className="w-[742px] text-white text-4xl font-bold font-['Montserrat']">Igniting a Revolution in HR Innovation</div> */}
@@ -124,12 +118,12 @@ const HeroSection = () => {
             />
 
             <img
-              src="/assets/net.png" // Replace with your top image path
+              src="/assets/net.png" 
               alt="Top Image"
               className="absolute inset-0  object-cover opacity-50"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
