@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const Rules = () => {
   return (
 
     <div className="border-b  border-gray-500 ">
@@ -49,4 +49,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Rules;

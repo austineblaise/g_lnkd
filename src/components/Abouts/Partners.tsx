@@ -15,7 +15,7 @@ const Card = () => {
 
       <div className=" border border-fuchsia-500 rounded-lg p-4 m-4 container mx-auto py-8  max-w-3xl">
         <div className="grid grid-cols-3 ">
-          {/* Upper partitions */}
+         
           <div className="  border-b border-r border-fuchsia-500 p-2 flex items-center justify-center">
             <div className="">
               <img

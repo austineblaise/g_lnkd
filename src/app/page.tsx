@@ -1,6 +1,7 @@
 import Criteria from "@/components/Abouts/Criteria";
 import Faqs from "@/components/Abouts/Faqs";
 import Partners from "@/components/Abouts/Partners";
+import Privacy from "@/components/Abouts/Privacy/Privacy";
 import Fake2 from "@/components/Abouts/Prize/Fake2";
 import Prize from "@/components/Abouts/Prize/Prize";
 import Random from "@/components/Abouts/Random";
@@ -26,6 +27,7 @@ const page = () => {
         <TimeLines />
         <Prize />
         <Partners />
+        <Privacy />
         {/* <Fake2 /> */}
         {/* <Random  /> */}
       </div>

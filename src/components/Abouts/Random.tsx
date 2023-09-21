@@ -3,7 +3,7 @@ import React from "react";
 const Random = () => {
   return (
     <div>
-      <div className="w-[1512px] h-[9046px] relative bg-gray-900">
+      <div className="w-[1512px] h-[9046px]">
         <img
           className="w-[1086px] h-[836px] left-0 top-0 absolute"
           src="https://via.placeholder.com/1086x836"
