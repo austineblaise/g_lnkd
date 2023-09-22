@@ -1,6 +1,46 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Register = () => {
+  const [loading, setLoadingg] = useState(false);
+  const [categories, setCategories] = useState([])
+
+  const onSubmit = async () => {
+    setLoadingg(true);
+
+    try {
+      const res = await axios.get(
+        " https://backend.getlinked.ai/hackathon/categories-list",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (res) {
+        setLoadingg(false);
+        console.log(res.data);
+        setCategories(res.data);
+       
+      } else {
+        setLoadingg(false);
+         console.log("error")
+      }
+    } catch (error) {
+      setLoadingg(false);
+
+      const errorObj = error;
+      console.log(errorObj);
+    }
+  };
+
+  useEffect(() => {
+    onSubmit();
+  }, []);
+
   return (
     <div className="min-h-screen py-10">
       <div className="container mx-auto">
@@ -12,7 +52,6 @@ const Register = () => {
             <img src="/assets/register.png" />
           </div>
           <div className="w-full lg:w-1/2 py-16 px-12">
-            {/* <h2 className="text-3xl mb-4">Register</h2> */}
             <div className="text-fuchsia-500 text-[32px] font-semibold font-['Clash Display'] mb-4">
               Register
             </div>
@@ -20,9 +59,6 @@ const Register = () => {
             <div className=" mb-4 text-white text-sm font-normal font-['Montserrat'] ">
               Be part of this movement!
             </div>
-            {/* <p className="mb-4">
-              Create your account. It’s free and only take a minute
-            </p> */}
 
             <div className="text-white text-2xl font-normal font-['Montserrat'] mb-4">
               CREATE YOUR ACCOUNT
@@ -55,19 +91,17 @@ const Register = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-5 mt-5">
-                <select
-                  data-te-select-init
-                  className="border border-gray-400 py-1 px-2"
-                >
-                  <option value="1">Select your category</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                  <option value="4">Four</option>
-                  <option value="5">Five</option>
-                  <option value="6">Six</option>
-                  <option value="7">Seven</option>
-                  <option value="8">Eight</option>
-                </select>
+              <select
+            data-te-select-init
+            className="border border-gray-400 py-1 px-2"
+          >
+            <option value="1">Select your category</option>
+            {categories.map((category:any) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
 
                 <select
                   data-te-select-init
