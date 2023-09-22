@@ -7,7 +7,6 @@ import Prize from "@/components/Abouts/Prize/Prize";
 import Random from "@/components/Abouts/Random";
 import Rules from "@/components/Abouts/Rules";
 import TimeLines from "@/components/Abouts/TimeLine/TimeLine";
-
 import BigIdea from "@/components/Abouts/idea";
 import HeroSection from "@/components/Header/Hero";
 import NavbarItems from "@/components/Header/NavbarItems";
@@ -15,23 +14,25 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="flex min-h-screen flex-col">
-      <NavbarItems />
+    <>
+      <main className="flex min-h-screen flex-col">
+    
 
-      <div>
-        <HeroSection />
-        <BigIdea />
-        <Rules />
-        <Criteria/>
-        <Faqs/>
-        <TimeLines />
-        <Prize />
-        <Partners />
-        <Privacy />
-        {/* <Fake2 /> */}
-        {/* <Random  /> */}
-      </div>
-    </main>
+        <div>
+          <HeroSection />
+          <BigIdea />
+          <Rules />
+          <Criteria />
+          <Faqs />
+          <TimeLines />
+          <Prize />
+          <Partners />
+          <Privacy />
+          {/* <Fake2 /> */}
+          {/* <Random  /> */}
+        </div>
+      </main>
+    </>
   );
 };
 
