@@ -18,7 +18,7 @@ const page = () => {
     <main className="flex min-h-screen flex-col">
       <NavbarItems />
 
-      <div className="">
+      <div>
         <HeroSection />
         <BigIdea />
         <Rules />

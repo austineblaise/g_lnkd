@@ -75,6 +75,8 @@ const Random = () => {
           Participate in getlinked tech Hackathon 2023 stand <br />a chance to
           win a Big prize
         </div>
+
+
         <div className="w-[722px] h-[236px] left-[128px] top-[293px] absolute">
           <div className="left-0 top-[47px] absolute text-white text-[80px] font-bold font-['Clash Display']">
             getlinked Tech
@@ -100,6 +102,10 @@ const Random = () => {
             src="https://via.placeholder.com/53x73"
           />
         </div>
+
+
+
+        
         <img
           className="w-[667px] h-[641px] left-[781px] top-[257px] absolute"
           src="https://via.placeholder.com/667x641"
