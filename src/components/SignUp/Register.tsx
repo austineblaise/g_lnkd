@@ -5,15 +5,16 @@ import { useForm } from "react-hook-form";
 import LoaderSpinner from "./Spinner";
 import { Flip, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CongratulationsModal from "./Modal";
 
 const Register = () => {
+  const [showModal, setShowModal] = useState(false);
   const {
     register,
     handleSubmit,
-    control,
+
     formState: { errors },
     reset,
-    clearErrors,
   } = useForm();
   const [loading, setLoading] = useState(false);
   const [loadingg, setLoadingg] = useState(false);
@@ -22,11 +23,15 @@ const Register = () => {
     email: "",
     phone_number: "",
     team_name: "",
-    group_size: "", // Change this to an empty string
+    group_size: "",
     project_topic: "",
-    category: "", // Change this to an empty string
+    category: "",
     privacy_policy_accepted: false,
   });
+
+  const handleToggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   const onSubmit = async (data: any) => {
     setLoading(true);
@@ -41,18 +46,15 @@ const Register = () => {
         }
       );
 
-      if (res) {
+      if (res.data) {
         setLoading(false);
-        toast.info("please check input fields", {
-          position: "top-right",
-          transition: Flip,
-        });
-        // Handl
-        reset(); // Clear the form
+        setShowModal(true);
+
+        reset();
       } else {
         setLoading(false);
 
-        toast.error((res as { message: string }).message, {
+        toast.error("An error occurred. Please try again later", {
           position: "top-right",
           transition: Flip,
         });
@@ -66,13 +68,11 @@ const Register = () => {
         error.response.data &&
         error.response.data.message
       ) {
-        // If the error is from the server and it has a message field
         toast.error(error.response.data.message, {
           position: "top-right",
           transition: Flip,
         });
       } else {
-        // Handle other types of errors, e.g., network errors
         toast.error("An error occurred. Please try again later.", {
           position: "top-right",
           transition: Flip,
@@ -120,9 +120,9 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen py-10 mt-10">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row w-10/12 lg:w-11/12 bg-[#150e28]  rounded-xl mx-auto shadow-lg overflow-hidden">
+        <div className="flex flex-col lg:flex-row w-11/12 lg:w-11/12 bg-[#150e28]  rounded-xl mx-auto shadow-lg overflow-hidden">
           <div
             className="w-full lg:w-1/2 flex  flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
             style={{ backgroundImage: 'url("/assets/shadow.png")' }}
@@ -283,9 +283,15 @@ const Register = () => {
                     onChange={handleInputChange}
                     value={formData.category}
                   >
-                    <option value="">Select your category</option>
+                    <option value="" className="bg-[#150e28]">
+                      Select your category
+                    </option>
                     {categories.map((category: any) => (
-                      <option key={category.id} value={category.id}>
+                      <option
+                        key={category.id}
+                        value={category.id}
+                        className="bg-[#150e28]"
+                      >
                         {category.name}
                       </option>
                     ))}
@@ -306,22 +312,40 @@ const Register = () => {
                   </label>
                   <select
                     data-te-select-init
-                    className={`border border-gray-400 py-1 px-2 ${
+                    className={`border border-gray-400 py-1 px-2  ${
                       errors.group_size ? "border-red-500" : ""
                     }text-white bg-transparent`}
                     {...register("group_size", { required: true })}
                     onChange={handleInputChange}
                     value={formData.group_size}
                   >
-                    <option value="">Select </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-                    <option value="6">Six</option>
-                    <option value="7">Seven</option>
-                    <option value="8">Eight</option>
+                    <option value="" className="bg-[#150e28]">
+                      Select{" "}
+                    </option>
+                    <option value="1" className="bg-[#150e28]">
+                      One
+                    </option>
+                    <option value="2" className="bg-[#150e28]">
+                      Two
+                    </option>
+                    <option value="3" className="bg-[#150e28]">
+                      Three
+                    </option>
+                    <option value="4" className="bg-[#150e28]">
+                      Four
+                    </option>
+                    <option value="5" className="bg-[#150e28]">
+                      Five
+                    </option>
+                    <option value="6" className="bg-[#150e28]">
+                      Six
+                    </option>
+                    <option value="7" className="bg-[#150e28]">
+                      Seven
+                    </option>
+                    <option value="8" className="bg-[#150e28]">
+                      Eight
+                    </option>
                   </select>
                   {errors.group_size && (
                     <p className="text-red-500 text-sm  italic">
@@ -345,12 +369,8 @@ const Register = () => {
                     checked={formData.privacy_policy_accepted}
                   />
 
-                  {/* <div className="text-white text-xs font-normal font-['Montserrat']">
-                    I agreed with the event terms and conditions and privacy
-                    policy
-                  </div> */}
                   <span className="text-white">
-                  I agreed with the event terms and conditions and privacy
+                    I agreed with the event terms and conditions and privacy
                   </span>
                 </div>
                 {errors.privacy_policy_accepted && (
@@ -387,6 +407,13 @@ const Register = () => {
                 </div>
               )}
             </form>
+
+            {showModal ? (
+              <CongratulationsModal
+                showModal={showModal}
+                toggleModal={handleToggleModal}
+              />
+            ) : null}
           </div>
         </div>
       </div>

@@ -3,22 +3,24 @@ import React from "react";
 
 const HeroSection = () => {
   return (
+    <div className="border-b  border-gray-500 mt-10">
+      <div className="text-center md:hidden lg:hidden block">
+        <div className="text-center mt-4">
+          <p className="lg:text-4xl text-xl lg:w-[780px] text-white font-bold font-['Montserrat'] lg:whitespace-nowrap  ">
+            {" "}
+            Igniting a Revolution in HR Innovation
+          </p>
 
-    <div className="border-b  border-gray-500"><div className="text-center md:hidden lg:hidden block">
-      <div className="text-center mt-4">
-        <p className="lg:text-4xl text-xl lg:w-[780px] text-white font-bold font-['Montserrat'] lg:whitespace-nowrap  ">
-          {" "}
-          Igniting a Revolution in HR Innovation
-        </p>
-
-        <div>
-          <img
-            src="/assets/line.svg"
-            alt="Your Image Alt Text"
-            className="relative lg:left-[485px] md:left-[485px] left-[235px] lg:-top-[42px] -top-[5px]  md:-top-[42px]  lg:w-[210px] md:w-[210px] w-[110px] " />
+          <div>
+            <img
+              src="/assets/line.svg"
+              alt="Your Image Alt Text"
+              className="relative lg:left-[485px] md:left-[485px] left-[235px] lg:-top-[42px] -top-[5px]  md:-top-[42px]  lg:w-[210px] md:w-[210px] w-[110px] "
+            />
+          </div>
         </div>
       </div>
-    </div><section className="lg:py-3     container  lg:ml-6 lg:px-12 px-2 py-4 ">
+      <section className="lg:py-3     container  lg:ml-6 lg:px-12 px-2 py-4 ">
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <div className=" container  col-span-6 text-center sm:text-left justify-self-start lg:mt-[105px] ">
             <div className="flex items-center justify-center lg:justify-start md:justify-start lg:mt-[100px]">
@@ -77,7 +79,6 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="col-span-6 place-self-center mt-4 lg:mt-0 ">
-
             <div className="text-center md:block lg:block hidden">
               <div className="text-center mt-4">
                 <p className="lg:text-4xl text-xl lg:w-[780px] text-white font-bold font-['Montserrat'] lg:whitespace-nowrap pb-10 ">
@@ -89,7 +90,8 @@ const HeroSection = () => {
                   <img
                     src="/assets/line.svg"
                     alt="Your Image Alt Text"
-                    className="relative lg:left-[485px] md:left-[485px] left-[230px] lg:-top-[42px] -top-[42px]  md:-top-[42px]  lg:w-[210px] md:w-[210px] w-[110px] " />
+                    className="relative lg:left-[485px] md:left-[485px] left-[230px] lg:-top-[42px] -top-[42px]  md:-top-[42px]  lg:w-[210px] md:w-[210px] w-[110px] "
+                  />
                 </div>
               </div>
             </div>
@@ -98,16 +100,19 @@ const HeroSection = () => {
               <img
                 src="/assets/smart-glasses-man.png"
                 alt="hero image"
-                className="object-cover  lg:h-[550px] mr-10" />
+                className="object-cover  lg:h-[550px] mr-10"
+              />
 
               <img
                 src="/assets/net.png"
                 alt="Top Image"
-                className="absolute inset-0  lg:h-[550px] object-cover opacity-50  lg:ml-[150px]" />
+                className="absolute inset-0  lg:h-[550px] object-cover opacity-50  lg:ml-[150px]"
+              />
             </div>
           </div>
         </div>
-      </section></div>
+      </section>
+    </div>
   );
 };
 
