@@ -54,7 +54,7 @@ const Register = () => {
       } else {
         setLoading(false);
 
-        toast.error("An error occurred. Please try again later", {
+        toast.error("An error occurred. check your prompts and try again", {
           position: "top-right",
           transition: Flip,
         });
@@ -73,7 +73,7 @@ const Register = () => {
           transition: Flip,
         });
       } else {
-        toast.error("An error occurred. Please try again later.", {
+        toast.error("An error occurred. check your prompts and try again.", {
           position: "top-right",
           transition: Flip,
         });
@@ -155,7 +155,7 @@ const Register = () => {
               CREATE YOUR ACCOUNT
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid lg:grid-cols-2 gap-5">
                 <div className="flex flex-col text-white">
                   <label
                     htmlFor="team_name"
@@ -204,7 +204,7 @@ const Register = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-5 mt-5">
+              <div className="grid lg:grid-cols-2 gap-5 mt-5">
                 <div className="flex flex-col">
                   <label
                     htmlFor="Email"

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
@@ -14,7 +15,7 @@ const Header = () => {
     { name: "Timeline", link: "/" },
     { name: "Overview", link: "/" },
     { name: "FAQs", link: "/" },
-    { name: "Contact", link: "/" },
+    { name: "Contact", link: "/contact" },
   ];
   let [open, setOpen] = useState(false);
 
@@ -22,14 +23,15 @@ const Header = () => {
     <div className=" border-b border-gray-500 z-10  w-full absolute lg:static    top-0 left-0  ">
       <div className=" md:flex items-center justify-between bg-[#150e28] py-6 md:px-[70px] px-7 ">
         {/* logo section */}
-        <div className="font-bold text-2xl cursor-pointer flex items-center ">
+
+        <Link href="/" className="font-bold text-2xl cursor-pointer flex items-center ">
           <span className="text-white  font-bold font-['Clash Display']">
             get
           </span>
           <span className="text-fuchsia-500  font-bold font-['Clash Display']">
             linked
           </span>
-        </div>
+        </Link>
 
         <div
           onClick={() => setOpen(!open)}
@@ -45,12 +47,12 @@ const Header = () => {
         >
           {Links.map((link, index) => (
             <li key={index} className="md:ml-8 md:my-0 my-7    ">
-              <a
+              <Link
                 href={link.link}
                 className="  text-white text-base font-normal font-['Montserrat']"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
 
