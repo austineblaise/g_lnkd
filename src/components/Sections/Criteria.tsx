@@ -8,7 +8,7 @@ const Criteria = () => {
           <img
             src="/assets/criteria.png"
             alt="Your Image"
-            className="w-[600px] h-[587px] lg:pt-10 "
+            className="lg:w-[600px] lg:h-[587px] md:h-[587px] lg:pt-10 "
           />
         </div>
 

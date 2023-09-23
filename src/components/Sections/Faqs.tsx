@@ -5,7 +5,7 @@ import FAQs from "./Faqs/FaqItems";
 
 const Faqs = () => {
   return (
-    <div className="border-b  border-gray-500 ">
+    <div className="border-b  border-gray-500  ">
       <div className="flex flex-col lg:flex-row justify-center lg:w-4/5 lg:mx-auto md:mx-auto lg:px-0 md:px-0 px-10 mt-8 lg:mt-0 container">
         
       

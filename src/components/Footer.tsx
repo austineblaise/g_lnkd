@@ -41,12 +41,12 @@ const Footer = () => {
               <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 Overview
               </div>
-              <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
+              <Link href="/timeline" className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 Timeline
-              </div>
-              <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
+              </Link>
+              <Link href="/FAQs" className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 FAQs
-              </div>
+              </Link>
               <Link href="/register" className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 Register
               </Link>

@@ -12,19 +12,30 @@ const Header = () => {
   };
 
   let Links = [
-    { name: "Timeline", link: "/" },
+    { name: "Timeline", link: "/timeline" },
     { name: "Overview", link: "/" },
-    { name: "FAQs", link: "/" },
+    { name: "FAQs", link: "/FAQs" },
     { name: "Contact", link: "/contact" },
   ];
   let [open, setOpen] = useState(false);
+
+  const handleToggleClick = () => {
+    setOpen(!open);
+  };
+
+  const handleMenuItemClick = () => {
+    setOpen(false);
+  };
 
   return (
     <div className=" border-b border-gray-500 z-10  w-full absolute lg:static    top-0 left-0  ">
       <div className=" md:flex items-center justify-between bg-[#150e28] py-6 md:px-[70px] px-7 ">
         {/* logo section */}
 
-        <Link href="/" className="font-bold text-2xl cursor-pointer flex items-center ">
+        <Link
+          href="/"
+          className="font-bold text-2xl cursor-pointer flex items-center "
+        >
           <span className="text-white  font-bold font-['Clash Display']">
             get
           </span>
@@ -46,10 +57,14 @@ const Header = () => {
           }`}
         >
           {Links.map((link, index) => (
-            <li key={index} className="md:ml-8 md:my-0 my-7    ">
+            <li
+              key={index}
+              className="md:ml-8 md:my-0 my-7"
+              onClick={handleMenuItemClick}
+            >
               <Link
                 href={link.link}
-                className="  text-white text-base font-normal font-['Montserrat']"
+                className="  text-white text-base font-normal font-['Montserrat'] "
               >
                 {link.name}
               </Link>
@@ -57,7 +72,10 @@ const Header = () => {
           ))}
 
           <button
-            onClick={handleRegisterClick}
+            onClick={() => {
+              handleRegisterClick();
+              handleMenuItemClick();
+            }}
             className="  font-normal font-['Montserrat'] btn bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 text-white md:ml-[100px] font-semibold px-3 py-1 rounded duration-500 md:static"
           >
             Register

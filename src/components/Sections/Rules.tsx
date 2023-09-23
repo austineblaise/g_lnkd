@@ -5,7 +5,7 @@ const Rules = () => {
     <div className="border-b  border-gray-500 ">
       <div className="flex flex-col lg:flex-row justify-center lg:w-4/5 lg:mx-auto md:mx-auto lg:px-0 md:px-0  px-[20px] mt-8 lg:mt-0 container">
         <div className="lg:w-1/2 order-2 lg:order-1 ">
-          <div className="flex flex-col justify-center h-full lg:p-6">
+          <div className="flex flex-col justify-center h-full p-6">
             <div>
               <span className="text-white text-[32px] font-bold font-['Clash Display']">
                 Rules and

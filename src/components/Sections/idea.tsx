@@ -8,7 +8,7 @@ const BigIdea = () => {
           <img
             src="/assets/bulb.png"
             alt="Your Image"
-            className="lg:w-[350px] lg:h-[320px]  h-[280px] object-cover"
+            className="lg:w-[350px] lg:h-[320px]  object-cover"
           />
         </div>
 
