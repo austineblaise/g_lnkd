@@ -26,7 +26,7 @@ const HeroSection = () => {
             <img
               src="/assets/shadow.png"
               alt="Background Image"
-              className="absolute top-0 left-0 h-full w-full opacity-40 z-0 -top-[100px]"
+              className="absolute top-0 left-0 h-full w-full opacity-40 z-0 -top-[150px]"
               style={{ left: "-500px" }}
             />
 

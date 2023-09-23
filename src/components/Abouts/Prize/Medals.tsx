@@ -1,6 +1,6 @@
 import React from "react";
 
-const Fake2 = () => {
+const Medals= () => {
   return (
     <section className="flex">
       <div className="w-[160px] h-[300px] left-0 top-[50px] relative m-2">
@@ -21,7 +21,7 @@ const Fake2 = () => {
         </div>
       </div>
 
-      <div className="w-[160px] h-[300px] left-0 top-[50px] relative m-2">
+      <div className="w-[160px] h-[300px] left-0 top-[50px] relative m-2 lg:transform lg:scale-125">
         <div className="w-[160px] h-[216px] left-0 top-[34px] absolute bg-fuchsia-500 bg-opacity-10 rounded-lg border border-fuchsia-500" />
         <img
           className="w-[137px] h-[138px] left-[12px] top-0 absolute"
@@ -57,9 +57,9 @@ const Fake2 = () => {
         </div>
       </div>
 
-      {/* Add more card elements here if needed */}
+  
     </section>
   );
 };
 
-export default Fake2;
+export default Medals;

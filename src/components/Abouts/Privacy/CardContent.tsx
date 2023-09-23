@@ -1,10 +1,16 @@
+"use client"
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const CardContent = () => {
+  const router = useRouter();
+  const handleRegisterClick = () => {
+    router.push("/register");
+  };
   return (
-    <div className=" border border-fuchsia-500     max-w-sm rounded  shadow-lg">
+    <div className=" border border-fuchsia-500     lg:max-w-sm rounded  shadow-lg">
       <div className="py-4 mx-4">
-        <div className="text-white text-sm font-normal font-['Montserrat'] leading-[30.30px] text-[32px">
+        <div className="text-white text-sm font-normal font-['Montserrat'] leading-[30.30px] text-[32px]">
           At getlinked tech Hackathon 1.0, we value your privacy
           <br />
           and are committed to protecting your personal information.
@@ -47,11 +53,13 @@ const CardContent = () => {
         </div>
       </div>
       <div className="flex items-center justify-center mb-4">
-  <button className="btn bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 text-white  font-semibold px-3 py-1 rounded duration-500 md:static">
-    Register
-  </button>
-</div>
-
+        <button
+          onClick={handleRegisterClick}
+          className="btn bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 text-white  font-semibold px-3 py-1 rounded duration-500 md:static"
+        >
+          Register
+        </button>
+      </div>
     </div>
   );
 };

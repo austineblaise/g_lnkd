@@ -3,11 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className=" text-white py-8">
-        <div className="container mx-auto flex flex-wrap justify-between">
+      <footer
+        className=" text-white py-8 bg-[#100B20] lg:mt-[150px] md:pt-[80px] md:mt-[30px] mt-[50px]">
+        <div className="container lg:px-[100px] md:px-5 px-[50px] flex flex-wrap justify-between ">
           <div className="w-full md:w-2/5 mb-4 md:mb-0">
-           
-
             <div className="mb-4">
               <span className="text-white text-3xl font-bold font-['Clash Display']">
                 get
@@ -25,7 +24,8 @@ const Footer = () => {
             </div>
 
             <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight">
-              Terms of Use <span className="text-fuchsia-500">|</span> Privacy Policy
+              Terms of Use <span className="text-fuchsia-500">|</span> Privacy
+              Policy
             </div>
           </div>
 
@@ -99,8 +99,6 @@ const Footer = () => {
               />
               27,Alara Street Yaba 100012 Lagos State
             </div>
-
-          
           </div>
         </div>
 

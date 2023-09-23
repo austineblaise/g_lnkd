@@ -1,23 +1,23 @@
-// pages/index.js or any other page
+// Awards.js
 import React from 'react';
 import Card from './Card';
-
 
 const cardsData = [
   {
     imageUrl: '/assets/medal1.png',
-    title: 'Card 1',
-    description: 'Description for Card 1',
+    title: '2nd',
+    description: 'N300,000',
   },
   {
     imageUrl: '/assets/medal2.png',
-    title: 'Card 2',
-    description: 'Description for Card 2',
+    title: '1st',
+    description: 'N400,000',
+    customStyles: 'scale-125  mr-4 ml-4 text-center',
   },
   {
     imageUrl: '/assets/medal3.png',
-    title: 'Card 3',
-    description: 'Description for Card 3',
+    title: '3rd',
+    description: 'N150,000',
   },
 ];
 
@@ -30,6 +30,8 @@ const Awards = () => {
           imageUrl={card.imageUrl}
           title={card.title}
           description={card.description}
+          customStyles={card.customStyles ? card.customStyles : ''} 
+          isSpecial={card.customStyles ? true : false} 
         />
       ))}
     </div>

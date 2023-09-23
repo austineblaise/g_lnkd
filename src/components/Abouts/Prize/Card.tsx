@@ -1,23 +1,69 @@
 import React from 'react';
 
-const Card = ({ imageUrl, title, description }: any) => {
+const Card = ({ imageUrl, title, description, isSpecial, customStyles }: any) => {
+  const cardClasses = `bg-fuchsia-500 bg-opacity-10 rounded-lg border border-fuchsia-50 p-4 ${
+    isSpecial
+      ? 'bg-purple-600 bg-opacity-10 rounded-lg border border-purple-600'
+      : ''
+  }`;
+
   return (
-    <div className={`max-w-sm rounded overflow-hidden shadow-lg relative `}>
-      {/* Medals positioned slightly outside the content card */}
-      <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
-        {/* Place your medal icons or images here */}
-        {/* Example:
-        <img src="medal.png" alt="Medal 1" className="w-8 h-8 ml-2" />
-        <img src="medal.png" alt="Medal 2" className="w-8 h-8 ml-2" />
-        */}
+    <div className={`${cardClasses} ${customStyles} mt-[100px]`}>
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-[100px] h-[100px] mx-auto -mt-[80px]"
+      />
+
+      <h2 className="text-white text-4xl font-bold font-['Montserrat'] leading-[10.90px] text-center text-center mt-10">
+        {title}
+      </h2>
+      <div className=" text-center text-white text-2xl font-semibold font-['Montserrat'] leading-[51.94px]">
+        Runner
       </div>
-      <img src={imageUrl} alt={title} className="w-full  object-cover" />
-      <div className="px-6 py-4 bg-red-500 relative z-0">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{description}</p>
-      </div>
+      <p className="text-fuchsia-500 text-[20px] font-bold font-['Montserrat'] text-center mb-4">
+        {description}
+      </p>
     </div>
   );
 };
 
 export default Card;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+
+// const Card = ({ imageUrl, title, description, isSpecial, customStyles }: any) => {
+//   const cardClasses = `bg-fuchsia-500 bg-opacity-10 rounded-lg border border-fuchsia-50 p-4  ${
+//     isSpecial ? 'bg-purple-600 bg-opacity-10 rounded-lg border border-purple-600' : ''
+//   }`;
+
+//   return (
+//     <div className={`${cardClasses} ${customStyles} mt-[100px]`}>
+//       <img
+//         src={imageUrl}
+//         alt={title}
+//         className="w-[100px] h-[100px] mx-auto -mt-[80px]" 
+//       />
+     
+//       <h2 className="text-white text-4xl font-bold font-['Montserrat'] leading-[10.90px] text-center text-center mt-10">{title}</h2>
+//       <div className=" text-center text-white text-2xl font-semibold font-['Montserrat'] leading-[51.94px]">Runner</div>
+//       <p className="text-fuchsia-500 text-[20px] font-bold font-['Montserrat'] text-center mb-4">{description}</p>
+//     </div>
+//   );
+// };
+
+// export default Card;
