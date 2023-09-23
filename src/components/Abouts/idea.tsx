@@ -4,17 +4,17 @@ const BigIdea = () => {
   
   return (
     <div className="border-b border-gray-500">
-      <section className="flex flex-col lg:flex-row mt-10 mx-auto container mb-10">
+      <section className="flex flex-col lg:flex-row md:flex-row mt-10 mx-auto container mb-10 md:px-0 lg:px-0 px-10">
         <div className="lg:w-1/2 flex items-center justify-center lg:order-1 order-1">
           <img
-            src="/assets/bulb.png" // Replace with your image path
+            src="/assets/bulb.png" 
             alt="Your Image"
             className="lg:w-[320px] lg:h-[320px]  h-[280px] object-cover"
           />
         </div>
 
-        {/* Text section (below image on mobile) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center order-2 lg:order-2">
+      
+        <div className="w-full w-1/2 flex items-center justify-center order-2 lg:order-2">
           <div>
             <div>
               <span className="text-white text-[32px] font-bold font-['Clash Display']">
@@ -25,7 +25,7 @@ const BigIdea = () => {
                 tech Hackathon 1.0
               </span>
             </div>
-            <div className="w-4/5 mt-4">
+            <div className="lg:w-4/5 md:w-4/5 mt-4">
               <p className="text-white ">
                 Our tech hackathon is a melting pot of visionaries, and its
                 purpose is as clear as day: to shape the future. Whether you're

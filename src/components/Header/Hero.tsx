@@ -1,7 +1,25 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [time, setTime] = useState({
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      setTime({ hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(intervalId); // Cleanup the interval on unmount
+  }, []);
+
   return (
     <div className="border-b  border-gray-500 mt-10">
       <div className="text-center md:hidden lg:hidden block mt-[120px]">
@@ -30,7 +48,6 @@ const HeroSection = () => {
               style={{ left: "-500px" }}
             />
 
-           
             <div className="flex items-center justify-center lg:justify-start md:justify-start lg:mt-[100px]">
               <h1 className="text-white lg:text-[50px] text-[35px] font-bold font-['Clash Display']">
                 getlinked Tech
@@ -47,7 +64,7 @@ const HeroSection = () => {
               <img
                 src="/assets/chain.png"
                 alt="Your Image"
-                className="lg:ml-2 lg:w-16 lg:h-16 w-8 h-8" 
+                className="lg:ml-2 lg:w-16 lg:h-16 w-8 h-8"
               />
             </h1>
 
@@ -70,15 +87,15 @@ const HeroSection = () => {
 
               <div>
                 <div className="text-white lg:text-[50px] md:text-[50px] text-[40px]   font-normal font-['Unica One'] leading-[85.12px]    ">
-                  00
+                  {time.hours}
                   <span className="align-baseline inline-block lg:text-[32px] text-[25px]">
                     h
                   </span>{" "}
-                  00
+                  {time.minutes}
                   <span className="align-baseline inline-block text-[32px] ">
                     m
                   </span>{" "}
-                  00
+                  {time.seconds}
                   <span className="align-baseline inline-block text-[32px]">
                     s
                   </span>

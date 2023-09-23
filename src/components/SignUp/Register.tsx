@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CongratulationsModal from "./Modal";
 
 const Register = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const {
     register,
     handleSubmit,

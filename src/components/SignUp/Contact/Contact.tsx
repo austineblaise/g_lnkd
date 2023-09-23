@@ -29,7 +29,7 @@ const Contact = () => {
     try {
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/hackathon/contact-form`,
-       
+
         data,
         {
           headers: {
@@ -40,7 +40,7 @@ const Contact = () => {
 
       if (res.data) {
         setLoading(false);
-        toast.success("Submitted Successfully. Thank you", {
+        toast.info("Submitted Successfully. Thank you", {
           position: "top-right",
           transition: Flip,
         });

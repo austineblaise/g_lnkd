@@ -1,4 +1,5 @@
 import React from "react";
+import MobileTimeLine from "./MobileTimeLine";
 
 const TimelineItem = ({
   number,
@@ -9,7 +10,7 @@ const TimelineItem = ({
   RightTitle,
   LeftTitle,
 }: any) => (
-  <div className="flex items-center relative">
+  <div className="flex items-center relative ">
     {/* Left Section */}
     <div className="w-full lg:w-1/2 lg:pr-8  mr-[100px]">
       <div className={`p-4   ${shadowColor}`}>
@@ -20,7 +21,6 @@ const TimelineItem = ({
         <p style={{ color: textColor }}>{leftContent}</p>
       </div>
     </div>
-
 
     <div className="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 -translate-y-4 bg-gradient-to-l from-purple-600 to-fuchsia-500 border-2 border-fuchsia-300 rounded-full left-1/2 sm:translate-y-0">
       <span className="text-white">{number}</span>
@@ -40,8 +40,8 @@ const TimelineItem = ({
 
 const Timeline = () => {
   return (
-    <div>
-      <div className="mb-10">
+    <div className="border-b  border-gray-500">
+      <div className="mb-10 mt-10 ">
         <div className="text-white text-[32px] font-bold font-['Clash Display'] text-center">
           Timeline
         </div>
@@ -49,9 +49,13 @@ const Timeline = () => {
           Here is the breakdown of the time we anticipate <br />
           using for the upcoming event.
         </div>
+
+        <div className="lg:hidden md:hidden block lg:px-0 md:px-0 px-10">
+          <MobileTimeLine />
+        </div>
       </div>
 
-      <div className="w-full mx-auto lg:max-w-4xl">
+      <div className="w-full mx-auto lg:max-w-4xl lg:block md:block hidden">
         <div className="relative">
           <div className="absolute hidden w-px h-full transform -translate-x-1/2 bg-indigo-300 lg:block left-1/2" />
           <div className="space-y-12 lg:space-y-8">

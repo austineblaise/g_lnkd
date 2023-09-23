@@ -3,7 +3,7 @@ import SplashPage from "./SplashLoader/SplashPage";
 
 const Splash = ({ finishLoading }:any) => {
   useEffect(() => {
-    const delay = 5000;
+    const delay = 4000;
     const loadingTimer = setTimeout(() => {
       finishLoading();
     }, delay);

@@ -5,8 +5,8 @@ import Awards from "./Awards";
 const Prize = () => {
   return (
     <>
-      <div className="border-b  border-gray-500 ">
-        <section className=" flex flex-col lg:flex-row mt-10 container mb-10">
+      <div className="border-b  border-gray-500  lg:mt-[100px] ">
+        <section className=" flex flex-col lg:flex-row mt-10 container lg:mb-[100px]">
           <div className="lg:w-1/2 flex items-center justify-center lg:order-1 order-1 ">
             <img src="/assets/prize.png" alt="Your Image" />
           </div>
