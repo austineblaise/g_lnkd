@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CongratulationsModal from "./Modal";
 
 const Register = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const {
     register,
     handleSubmit,
@@ -37,7 +37,8 @@ const Register = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://backend.getlinked.ai/hackathon/registration",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/hackathon/registration`,
+
         data,
         {
           headers: {
@@ -85,7 +86,8 @@ const Register = () => {
     setLoadingg(true);
     try {
       const res = await axios.get(
-        "https://backend.getlinked.ai/hackathon/categories-list",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/hackathon/categories-list`,
+
         {
           headers: {
             "Content-Type": "application/json",
@@ -299,12 +301,16 @@ const Register = () => {
                       </option>
                     ))}
                   </select>
+                  {loadingg && <div className="flex text-white italics mt-2"> category is loading ... <LoaderSpinner /> </div>}
+
                   {errors.category && (
                     <p className="text-red-500 text-sm  italic">
-                      Category is required
+                      Category is requirede
                     </p>
                   )}
                 </div>
+
+             
 
                 <div className="flex flex-col">
                   <label

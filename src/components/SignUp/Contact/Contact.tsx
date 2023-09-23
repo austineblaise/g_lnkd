@@ -28,7 +28,8 @@ const Contact = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://backend.getlinked.ai/hackathon/contact-form",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/hackathon/contact-form`,
+       
         data,
         {
           headers: {

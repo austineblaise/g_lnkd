@@ -21,8 +21,7 @@ const TimelineItem = ({
       </div>
     </div>
 
-    {/* Number Indicator */}
-    {/* <div className="w-[53px] h-[53px] bg-gradient-to-l from-purple-600 to-fuchsia-500 rounded-[26.50px]" /> */}
+
     <div className="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 -translate-y-4 bg-gradient-to-l from-purple-600 to-fuchsia-500 border-2 border-fuchsia-300 rounded-full left-1/2 sm:translate-y-0">
       <span className="text-white">{number}</span>
     </div>
@@ -43,22 +42,19 @@ const Timeline = () => {
   return (
     <div>
       <div className="mb-10">
-      <div className="text-white text-[32px] font-bold font-['Clash Display'] text-center">
-        Timeline
+        <div className="text-white text-[32px] font-bold font-['Clash Display'] text-center">
+          Timeline
+        </div>
+        <div className="text-center text-white text-sm font-normal font-['Montserrat'] leading-normal text-center">
+          Here is the breakdown of the time we anticipate <br />
+          using for the upcoming event.
+        </div>
       </div>
-      <div className="text-center text-white text-sm font-normal font-['Montserrat'] leading-normal text-center">
-        Here is the breakdown of the time we anticipate <br />
-        using for the upcoming event.
-      </div>
-      </div>
-
 
       <div className="w-full mx-auto lg:max-w-4xl">
         <div className="relative">
-          {/* Vertical middle line */}
           <div className="absolute hidden w-px h-full transform -translate-x-1/2 bg-indigo-300 lg:block left-1/2" />
           <div className="space-y-12 lg:space-y-8">
-            {/* Timeline items */}
             <TimelineItem
               number="1"
               RightTitle="November 18, 2023"
@@ -72,7 +68,6 @@ const Timeline = () => {
               number="2"
               RightTitle="Teams Registration begins"
               LeftTitle="November 18, 2023"
-              // leftContent="Left content for item 2 goes here."
               rightContent="Right content for item 2 goes here."
               textColor="white"
               shadowColor="shadow-red-300"
@@ -83,7 +78,6 @@ const Timeline = () => {
               LeftTitle="Teams Registration ends"
               leftContent="Interested Participants are no longer Allowed to
               register"
-              // rightContent="Right content for item 3 goes here."
               textColor="white"
               shadowColor="shadow-yellow-300"
             />
@@ -104,8 +98,6 @@ const Timeline = () => {
               LeftTitle="Getlinked Hackathon 1.0 Offically Begins"
               leftContent="Accepted teams can now proceed to build their
               ground breaking skill driven solutions"
-              // rightContent="All teams whom idea has been accepted into getlinked tech
-              // hackathon 1.0 2023 are formally announced"
               textColor="white"
               shadowColor="shadow-lime-300"
             />
