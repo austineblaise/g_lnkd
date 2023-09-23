@@ -9,7 +9,7 @@ const page = () => {
         <Timeline />
       </div>
 
-      <div className="lg:hidden md:hidden block">
+      <div className="lg:hidden md:hidden block p-[70px] mt-10">
         <MobileTimeLine />
       </div>
     </>
