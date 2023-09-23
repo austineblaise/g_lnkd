@@ -4,7 +4,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div className="border-b  border-gray-500 mt-10">
-      <div className="text-center md:hidden lg:hidden block">
+      <div className="text-center md:hidden lg:hidden block mt-[120px]">
         <div className="text-center mt-4">
           <p className="lg:text-4xl text-xl lg:w-[780px] text-white font-bold font-['Montserrat'] lg:whitespace-nowrap  ">
             {" "}
@@ -23,6 +23,14 @@ const HeroSection = () => {
       <section className="lg:py-3     container  lg:ml-6 lg:px-12 px-2 py-4 ">
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <div className=" container  col-span-6 text-center sm:text-left justify-self-start lg:mt-[105px] ">
+            <img
+              src="/assets/shadow.png"
+              alt="Background Image"
+              className="absolute top-0 left-0 h-full w-full opacity-40 z-0 -top-[100px]"
+              style={{ left: "-500px" }}
+            />
+
+           
             <div className="flex items-center justify-center lg:justify-start md:justify-start lg:mt-[100px]">
               <h1 className="text-white lg:text-[50px] text-[35px] font-bold font-['Clash Display']">
                 getlinked Tech
@@ -39,7 +47,7 @@ const HeroSection = () => {
               <img
                 src="/assets/chain.png"
                 alt="Your Image"
-                className="lg:ml-2 lg:w-16 lg:h-16 w-8 h-8" // Adjust margin as needed for spacing
+                className="lg:ml-2 lg:w-16 lg:h-16 w-8 h-8" 
               />
             </h1>
 

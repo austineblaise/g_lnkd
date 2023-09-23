@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className=" text-white py-8">
         <div className="container mx-auto flex flex-wrap justify-between">
           <div className="w-full md:w-2/5 mb-4 md:mb-0">
-            {/* <h2 className="text-xl font-semibold mb-4">Left Section</h2> */}
+           
 
             <div className="mb-4">
               <span className="text-white text-3xl font-bold font-['Clash Display']">

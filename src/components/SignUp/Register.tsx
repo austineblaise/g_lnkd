@@ -123,10 +123,13 @@ const Register = () => {
     <div className="min-h-screen py-10 mt-10">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row w-11/12 lg:w-11/12 bg-[#150e28]  rounded-xl mx-auto shadow-lg overflow-hidden">
-          <div
-            className="w-full lg:w-1/2 flex  flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
-            style={{ backgroundImage: 'url("/assets/shadow.png")' }}
-          >
+          <div className="relative w-full lg:w-1/2 flex  flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center">
+            <img
+              src="/assets/shadow.png"
+              alt="Background Image"
+              className="absolute top-0 left-0 h-full w-full opacity-40 z-0 -top-[100px]"
+              style={{ left: "-175px" }}
+            />
             <img src="/assets/star.png" alt="star" />
             <img src="/assets/register.png" alt="Registration" />
             <img src="/assets/star.png " alt="start" />
