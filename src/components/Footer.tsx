@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -46,9 +47,9 @@ const Footer = () => {
               <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 FAQs
               </div>
-              <div className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
+              <Link href="/register" className="text-white text-xs font-normal font-['Montserrat'] leading-tight mb-2">
                 Register
-              </div>
+              </Link>
               <div className="flex">
                 <div className="text-fuchsia-500 text-xs font-normal font-['Montserrat']">
                   Follow us

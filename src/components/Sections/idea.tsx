@@ -1,19 +1,17 @@
 import React from "react";
 
 const BigIdea = () => {
-  
   return (
     <div className="border-b border-gray-500">
       <section className="flex flex-col lg:flex-row md:flex-row mt-10 mx-auto container mb-10 md:px-0 lg:px-0 px-10">
         <div className="lg:w-1/2 flex items-center justify-center lg:order-1 order-1">
           <img
-            src="/assets/bulb.png" 
+            src="/assets/bulb.png"
             alt="Your Image"
             className="lg:w-[320px] lg:h-[320px]  h-[280px] object-cover"
           />
         </div>
 
-      
         <div className="w-full w-1/2 flex items-center justify-center order-2 lg:order-2">
           <div>
             <div>

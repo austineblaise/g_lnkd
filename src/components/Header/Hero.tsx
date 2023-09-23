@@ -17,11 +17,11 @@ const HeroSection = () => {
       setTime({ hours, minutes, seconds });
     }, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup the interval on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="border-b  border-gray-500 mt-10">
+    <div className=" mt-10 border-b  border-gray-500">
       <div className="text-center md:hidden lg:hidden block mt-[120px]">
         <div className="text-center mt-4">
           <p className="lg:text-4xl text-xl lg:w-[780px] text-white font-bold font-['Montserrat'] lg:whitespace-nowrap  ">
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <section className="lg:py-3     container  lg:ml-6 lg:px-12 px-2 py-4 ">
+      <section className="     container  lg:ml-6 lg:px-12 px-2 ">
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <div className=" container  col-span-6 text-center sm:text-left justify-self-start lg:mt-[105px] ">
             <img
@@ -48,7 +48,11 @@ const HeroSection = () => {
               style={{ left: "-500px" }}
             />
 
-            <div className="flex items-center justify-center lg:justify-start md:justify-start lg:mt-[100px]">
+            <span className="relative top-[20px] left-[305px] lg:block md:hidden hidden">
+              <img src="/assets/bul.png" alt="Icon" className=" object-fill" />
+            </span>
+
+            <div className="flex items-center justify-center lg:justify-start md:justify-start ">
               <h1 className="text-white lg:text-[50px] text-[35px] font-bold font-['Clash Display']">
                 getlinked Tech
               </h1>
@@ -87,15 +91,15 @@ const HeroSection = () => {
 
               <div>
                 <div className="text-white lg:text-[50px] md:text-[50px] text-[40px]   font-normal font-['Unica One'] leading-[85.12px]    ">
-                  {time.hours}
+                  {time?.hours}
                   <span className="align-baseline inline-block lg:text-[32px] text-[25px]">
                     h
                   </span>{" "}
-                  {time.minutes}
+                  {time?.minutes}
                   <span className="align-baseline inline-block text-[32px] ">
                     m
                   </span>{" "}
-                  {time.seconds}
+                  {time?.seconds}
                   <span className="align-baseline inline-block text-[32px]">
                     s
                   </span>
@@ -122,6 +126,12 @@ const HeroSection = () => {
             </div>
 
             <div className="flex justify-center sm:justify-end relative overflow-hidden ">
+              <img
+                src="/assets/metrix.png"
+                alt="Background Image"
+                className="absolute inset-0 h-[550px] w-full object-cover opacity-50"
+              />
+
               <img
                 src="/assets/smart-glasses-man.png"
                 alt="hero image"
