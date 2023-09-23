@@ -4,11 +4,11 @@ const Criteria = () => {
   return (
     <div className="border-b  border-gray-500 ">
       <section className=" flex flex-col lg:flex-row  md:flex-row  mt-10  container mb-10">
-        <div className="lg:w-1/2 flex items-center justify-center lg:order-1 order-1  lg:px-0 md:px-0  px-5">
+        <div className="lg:w-4/5 lg:mx-auto flex items-center justify-center lg:order-1 order-1  lg:px-0 md:px-0  px-5">
           <img
             src="/assets/criteria.png"
             alt="Your Image"
-            className="w-[600px] h-[587px] lg:pt-10"
+            className="w-[600px] h-[587px] lg:pt-10 "
           />
         </div>
 

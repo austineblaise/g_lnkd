@@ -4,11 +4,11 @@ const BigIdea = () => {
   return (
     <div className="border-b border-gray-500">
       <section className="flex flex-col lg:flex-row md:flex-row mt-10 mx-auto container mb-10 md:px-0 lg:px-0 px-10">
-        <div className="lg:w-1/2 flex items-center justify-center lg:order-1 order-1">
+        <div className="lg:w-4/5 lg:mx-auto flex items-center justify-center lg:order-1 order-1">
           <img
             src="/assets/bulb.png"
             alt="Your Image"
-            className="lg:w-[320px] lg:h-[320px]  h-[280px] object-cover"
+            className="lg:w-[350px] lg:h-[320px]  h-[280px] object-cover"
           />
         </div>
 
