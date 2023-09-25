@@ -72,4 +72,4 @@ yarn run build
 
 - Github: [austineblaise](https://github.com/austineblaise)
 - Twitter: [austineblaise](https://twitter.com/austineblaise)
-- Linkedin: [akoke-anto](https://www.linkedin.com/in/austineblaise/)
+- Linkedin: [austineblaise](https://www.linkedin.com/in/austineblaise/)
